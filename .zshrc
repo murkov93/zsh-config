@@ -75,8 +75,8 @@ setopt share_history
 # ===============================
 # Useful options
 # ===============================
-setopt autocd       # cd sans taper 'cd'
-setopt correct      # correction auto des commandes
+setopt autocd      
+setopt correct     
 setopt no_beep
 setopt prompt_subst
 
@@ -95,5 +95,5 @@ alias ...='cd ../..'
 # ===============================
 # Functions
 # ===============================
-mkcd() { mkdir -p "$1" && cd "$1"; }  # créer dossier et y aller
+mkcd() { mkdir -p "$1" && cd "$1"; }  
 
