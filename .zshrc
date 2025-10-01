@@ -1,23 +1,15 @@
-# ===============================
 # Path to Oh My Zsh installation
-# ===============================
 export ZSH="$HOME/.oh-my-zsh"
 
-# ===============================
 # Theme
-# ===============================
 ZSH_THEME="robbyrussell"  # will be overridden by the custom prompt below
 
-# ===============================
 # Plugins
-# ===============================
 plugins=(git zsh-completions autojump extract)
 
 source $ZSH/oh-my-zsh.sh
 
-# ===============================
 # Custom red Kali-style prompt with username, Git branch, and time
-# ===============================
 autoload -Uz vcs_info
 precmd() { vcs_info }
 
@@ -27,24 +19,18 @@ zstyle ':vcs_info:git:*' actionformats ' (%b|%a%u)'
 PROMPT='%F{red}┌──%n@kali-[%~]%f${vcs_info_msg_0_} [%*]
 %F{red}└─%f$ '
 
-# ===============================
 # Syntax highlighting
-# ===============================
 if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
     source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
-# ===============================
 # Autosuggestions
-# ===============================
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=magenta'
 fi
 
-# ===============================
 # Fuzzy / interactive completion
-# ===============================
 autoload -Uz compinit
 compinit
 
@@ -60,9 +46,7 @@ zstyle ':completion:*:warnings' format '%F{yellow}%d%f'
 # Tab to complete
 bindkey '^I' expand-or-complete
 
-# ===============================
 # History
-# ===============================
 HISTFILE=~/.zsh_history
 HISTSIZE=5000
 SAVEHIST=10000
@@ -72,17 +56,13 @@ setopt hist_reduce_blanks
 setopt append_history
 setopt share_history
 
-# ===============================
 # Useful options
-# ===============================
 setopt autocd      
 setopt correct     
 setopt no_beep
 setopt prompt_subst
 
-# ===============================
 # Aliases
-# ===============================
 alias ll='ls -alF --color=auto'
 alias la='ls -A --color=auto'
 alias l='ls -CF --color=auto'
@@ -92,8 +72,6 @@ alias gp='git push'
 alias ..='cd ..'
 alias ...='cd ../..'
 
-# ===============================
 # Functions
-# ===============================
 mkcd() { mkdir -p "$1" && cd "$1"; }  
 
