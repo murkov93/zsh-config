@@ -6,7 +6,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # ===============================
 # Theme
 # ===============================
-ZSH_THEME="robbyrussell"  # sera surchargé par prompt perso ci-dessous
+ZSH_THEME="robbyrussell"  # will be overridden by the custom prompt below
 
 # ===============================
 # Plugins
