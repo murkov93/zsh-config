@@ -102,8 +102,3 @@ extract() {
 - Add more plugins or aliases as needed
 
 ---
-
-## License
-
-You can add a license if you want to make your config public. MIT or GPL are common choices.
-
